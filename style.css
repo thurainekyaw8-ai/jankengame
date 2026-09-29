@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #101827;
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+}
+
+.game {
+    width: 90%;
+    max-width: 700px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background: #1c2738;
+
+    border: 1px solid #334155;
+    border-radius: 20px;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: 48px;
+}
+
+.subtitle {
+    margin-top: 8px;
+
+    color: #94a3b8;
+}
+
+.battle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+
+    margin: 50px 0;
+}
+
+.player,
+.computer {
+    width: 150px;
+}
+
+.player h2,
+.computer h2 {
+    margin-bottom: 15px;
+}
+
+.hand {
+    font-size: 70px;
+
+    min-height: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vs {
+    font-size: 24px;
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+.result {
+    margin-bottom: 20px;
+}
+
+#result {
+    color: #60a5fa;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.choice {
+    width: 130px;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #3b82f6;
+    color: white;
+
+    font-size: 40px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.choice span {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 15px;
+}
+
+.choice:hover {
+    background: #2563eb;
+
+    transform: translateY(-5px);
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+
+    gap: 60px;
+
+    margin-top: 40px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #334155;
+}
+
+.score div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.score span {
+    color: #94a3b8;
+}
+
+.score strong {
+    font-size: 28px;
+}
+.reset-button {
+    margin-top: 25px;
+
+    padding: 10px 20px;
+
+    border: 1px solid #475569;
+    border-radius: 8px;
+
+    background: #334155;
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.reset-button:hover {
+    background: #475569;
+}
