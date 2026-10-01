@@ -8,8 +8,10 @@ const playerScoreDisplay = document.querySelector("#player-score");
 const computerScoreDisplay = document.querySelector("#computer-score");
 const resetButton = document.querySelector("#reset-button");
 
-let playerScore = 0;
-let computerScore = 0;
+let playerScore = Number(localStorage.getItem("playerScore")) || 0;
+let computerScore = Number(localStorage.getItem("computerScore")) || 0;
+playerScoreDisplay.textContent = playerScore;
+computerScoreDisplay.textContent = computerScore;
 
 const handIcons = {
     rock: "🪨",
@@ -55,14 +57,17 @@ async function playGame(playerChoice) {
     if (data.result === "win") {
         resultDisplay.textContent = "You Win! 🎉";
 
-        playerScore++;
+       playerScore++;
         playerScoreDisplay.textContent = playerScore;
 
+        localStorage.setItem("playerScore", playerScore);
     } else if (data.result === "lose") {
         resultDisplay.textContent = "You Lose!";
 
         computerScore++;
         computerScoreDisplay.textContent = computerScore;
+
+        localStorage.setItem("computerScore", computerScore);
 
     } else {
         resultDisplay.textContent = "Draw!";
@@ -71,6 +76,8 @@ resetButton.addEventListener("click", function () {
 
     playerScore = 0;
     computerScore = 0;
+    localStorage.removeItem("playerScore");
+    localStorage.removeItem("computerScore");
 
     playerScoreDisplay.textContent = 0;
     computerScoreDisplay.textContent = 0;
